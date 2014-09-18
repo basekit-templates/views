@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<div class="bk-home">
+
+<header class="cd-header">
+	<div class="nav-icon"><a class="cd-menu-trigger" href="#main-nav"><span></span></a></div>
+	<div class="brand">
+		<div class="visual-identity">
+			{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
+		</div>
+	</div>
+	<div class="header-content">
+		<div class="details-container">
+			{{widget('content', 'contenttitle', {content: '<h2>Lorem Ipsum Amet</h2>', lines: 'all'})|raw}}
+			{{widget('content', 'contentparagraph', {content: 'Amet consectetur adipiscing elit. Proin non porttitor nibh. Proin rutrum eros ut tempor faucibus. Maecenas nec cursus turpis. Lorem ipsum dolor sit amet.', lines: 'all'})|raw}}
+			{{widget('button', 'button', {text:'Loremips', 'align':'widget-align-left'})|raw}}
+		</div>
+		<div class="profile-container">
+			{{widget('profile', 'address', { 'profileType':'address'})|raw}}
+		</div>
+	</div>
+	<div class="header-arrow-down"><a href="#zone-content"></a></div>
+</header>
+
+<div class="cd-shadow-layer"></div>
+<nav id="main-nav">
+	{{widget('extendednavigation', 'header-navigation', {"align":"center"})|raw}}
+	<a href="#0" class="cd-close-menu"><span></span></a>
+</nav>
+
+<div class="canvas">
+	<div class="wrapper">
+		<div class="main">
+			<a name="zone-content"></a>
+			{{zone('main')|raw}}
+		</div><!--end main-->
+	</div><!--end wrapper-->
+</div><!--end canvas-->
+
+{% include 'includes/footer.twig' %}
+
+</div>
+
+{% endblock %}

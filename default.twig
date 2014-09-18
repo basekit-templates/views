@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<div class="bk-default">
+
+<header class="cd-header">
+	<div class="nav-icon"><a class="cd-menu-trigger" href="#main-nav"><span></span></a></div>
+	<div class="brand">
+		<div class="visual-identity">
+			{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
+		</div>
+	</div>
+</header>
+
+<nav id="main-nav">
+	{{widget('extendednavigation', 'header-navigation', {"align":"center"})|raw}}
+	<a href="#0" class="cd-close-menu"><span></span></a>
+</nav>
+
+<div class="canvas">
+	<div class="wrapper">
+		<div class="main">
+			{{zone('main')|raw}}
+		</div><!--end main-->
+	</div><!--end wrapper-->
+</div><!--end canvas-->
+
+{% include 'includes/footer.twig' %}
+
+</div><!-- end bk-default-page -->
+
+{% endblock %}
