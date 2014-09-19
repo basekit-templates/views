@@ -104,7 +104,7 @@
             "font-family": "\"Oxygen\", \"Helvetica\", Arial, sans-serif",
             "font-size": "24px",
             "font-weight": "400",
-            "line-height": "30px",
+            "line-height": "36px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch1",
             "letter-spacing": "inherit",
