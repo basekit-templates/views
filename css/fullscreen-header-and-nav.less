@@ -280,6 +280,14 @@ Main components
     .twitter .twitter-content p a {
         color: @color-swatch3;
     }
+    form button.btn {
+        -webkit-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+        -moz-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+        box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+        &:hover {
+            background-color: lighten(@color-swatch3,5%);
+        }
+    }
 }
 
 .header-arrow-down a {
