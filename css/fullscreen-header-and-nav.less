@@ -271,6 +271,9 @@ Main components
         padding: 8% 5%;
     }
     background-color: @color-swatch2;
+    .widget.content .bk-content-text p {
+        color: @color-swatch1;
+    }
     .widget.profile {
         .bk-profile-address p, p, span, a {
             color: @color-swatch1;
@@ -280,12 +283,20 @@ Main components
     .twitter .twitter-content p a {
         color: @color-swatch3;
     }
-    form button.btn {
+    .widget.profile form button.btn {
         -webkit-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
         -moz-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
         box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
         &:hover {
             background-color: lighten(@color-swatch3,5%);
+        }
+        @media @tablet {
+            left: 0;
+        }
+    }
+    .widget.profile form fieldset input {
+        @media @tablet {
+            width: 100%;
         }
     }
 }
