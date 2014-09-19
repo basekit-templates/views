@@ -1110,8 +1110,20 @@ footer.blog-post-metadata time {
         @media @mobile {
             margin: 0;
         }
+        form .form-group {
+            display: inline-block;
+            @media @mobile {
+                display: block;
+            }
+        }
         form .form-group label {
             display: block;
+        }
+        form .form-group label {
+            @media @mobile {
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }
