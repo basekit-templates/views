@@ -554,9 +554,11 @@ Navigation
         padding: 0 80px;
         &:after {
             display: inline-block;
-            content: "\2193";
+            content: "\25BC";
             padding-left: 5px;
             color: @font-swatch6-color;
+            vertical-align: middle;
+            font-size: 12px;
         }
     }
     &:hover {
@@ -596,6 +598,15 @@ Navigation
         padding: 10px;
     }
 }
+
+#main-nav .widget .extendednavigation ul li:hover ul li .text {
+    color: @font-swatch6-color;
+}
+
+#main-nav .widget .extendednavigation ul li:hover ul li:hover .text {
+    color: @font-swatch6-color-hover;
+}
+
 #main-nav .widget .extendednavigation ul li.folder ul li .text, #main-nav .widget .extendednavigation ul li.folder ul li span {
     padding: 0px;
 }
@@ -607,24 +618,29 @@ Navigation
 }
 #main-nav .cd-close-menu {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 13px;
+    right: 3%;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: @color-swatch3;
+    width: 50px;
+    height: 50px;
+    background-color: @color-swatch4;
     /* image replacement */
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
     z-index: 9999999;
+    .border-radius(5px);
+    &:hover {
+        background-color: @color-swatch3;
+        .transition( all, 0.5s, ease );
+    }
 }
 #main-nav .cd-close-menu::before, #main-nav .cd-close-menu::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 18px;
-    left: 10px;
+    top: 24px;
+    left: 15px;
     width: 20px;
     height: 3px;
     background-color: #FFF;
