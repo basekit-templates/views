@@ -12,7 +12,7 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+} 
 
 html, body {
   /* important for the full-width image to work */
@@ -474,10 +474,10 @@ Navigation
         border-bottom: 1px solid darken(@color-swatch7,5%);
         min-height: 50px;
             @media @tablet {
-                padding: 22px 0;
+                padding: 0;
             }
             @media @mobile {
-                padding: 9px 0;
+                padding: 0;
                 min-height: 45px;
             }
     }
@@ -555,6 +555,9 @@ Navigation
     .text {
         display: block;
         padding: 28px 80px;
+        @media @mobile {
+            padding: 10px;
+        }
         &:after {
             display: inline-block;
             content: "\25BC";
@@ -592,7 +595,7 @@ Navigation
 #main-nav .widget .extendednavigation ul li a {
     padding: 28px 80px;
     @media @mobile {
-        padding: 0 5%;
+        padding: 10px;
     }
 }
 #main-nav .widget .extendednavigation ul li.folder ul li a {
