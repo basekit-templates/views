@@ -3,7 +3,6 @@
     "thumbnail":"views.png",
     "screenshot":"views.png",
     "templateType":"standard",
-    "pageTypes":["home"],
     "images":[
         "images/feature-bg.jpg"
     ],
