@@ -417,11 +417,13 @@ Navigation
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     /* we move this element off the canvas */
+    /*
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
+    */
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
@@ -682,6 +684,7 @@ Navigation
 .edit #main-nav.is-visible {
     z-index: 99999;
 }
+/*
 #main-nav.is-visible {
     z-index: 10;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -691,6 +694,7 @@ Navigation
     -o-transform: translateY(0);
     transform: translateY(0);
 }
+*/
 .no-js #main-nav {
     position: static;
     -webkit-transform: translateY(0);
