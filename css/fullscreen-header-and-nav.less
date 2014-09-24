@@ -471,7 +471,6 @@ Navigation
     -ms-flex-align: start;
     align-items: flex-start;
     li {
-        padding: 28px 0;
         border-bottom: 1px solid darken(@color-swatch7,5%);
         min-height: 50px;
             @media @tablet {
@@ -555,7 +554,7 @@ Navigation
     }
     .text {
         display: block;
-        padding: 0 80px;
+        padding: 28px 80px;
         &:after {
             display: inline-block;
             content: "\25BC";
@@ -591,13 +590,14 @@ Navigation
     }
 }
 #main-nav .widget .extendednavigation ul li a {
-    padding: 0 80px;
+    padding: 28px 80px;
     @media @mobile {
         padding: 0 5%;
     }
 }
 #main-nav .widget .extendednavigation ul li.folder ul li a {
-    padding: 23px;
+    padding: 28px;
+    border-bottom: 1px solid darken(@color-swatch7,5%);
     @media @mobile {
         padding: 10px;
     }
