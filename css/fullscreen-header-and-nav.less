@@ -270,11 +270,12 @@ Main components
     @media @mobile {
         margin-bottom: 0;
     }
-    @media only screen and (max-width: 600px) {
-        padding: 8% 5%;
-    }
     background-color: @color-swatch2;
     .widget.profile {
+        padding: 3em;
+        @media only screen and (max-width: 600px) {
+            padding: 8% 5%;
+        }
         .bk-profile-address p, p, span, a {
             color: @color-swatch1;
             font-weight: 700;
