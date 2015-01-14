@@ -101,9 +101,9 @@
         },
         "font6": {
             "font-family": "\"Oxygen\", \"Helvetica\", Arial, sans-serif",
-            "font-size": "24px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "36px",
+            "line-height": "26px",
             "color": "@color-swatch3",
             "color-hover": "@color-swatch6",
             "letter-spacing": "inherit",
