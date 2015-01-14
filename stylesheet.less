@@ -3,7 +3,6 @@
 	==================*/
 
 @import "@{templateCommon}/basekit-bootstrap.less";
-@import "@{templateLocal}/css/fullscreen-header-and-nav.less";
 
 /* =======
 	Mixins 
@@ -29,6 +28,47 @@
 	transition: 		@prop @time @ease;
 }
 
+
+
+
+/* =================== 
+
+Primary style
+
+====================== */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+
+html, body {
+  /* important for the full-width image to work */
+  height: 100%;
+}
+
+body {
+    background-image: image('/images/feature-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    margin: 0;
+    .bk-home {
+        height: 100%;
+    }
+    @media only screen and (max-width: 960px) {
+        background-size: auto;
+    }
+}
+
+
+
+
 /* =====
 	Main 
 	==== */
@@ -49,8 +89,8 @@
     background-color: darken(@color-swatch1,2%);
     display: inline-block;
     width: 100%;
-    border-top: 1px solid lighten(@color-swatch5,37%);
-    border-bottom: 1px solid lighten(@color-swatch5,37%);
+    border-top: 1px solid darken(@color-swatch1,7%);
+    border-bottom: 1px solid darken(@color-swatch1,7%);
 }
 
 .wrapper {
@@ -62,6 +102,9 @@
     }
 }
 
+
+
+
 /* ===============================
    BLOCK QUOTE
    =============================== */
@@ -71,6 +114,9 @@
         color: @color-swatch3;
     }
   }
+
+
+
 
 /* ========
     BUTTONS
@@ -194,6 +240,8 @@ a.btn.ecombasket-summary-link {
         }
     }
 }
+
+
 
 
 /* ======
@@ -1526,6 +1574,565 @@ span.ecom-product-category {
         }
         &:last-child:after {
             content: '';
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// -----------------------------
+
+// #Header - LOGO AND NAVIGATION
+
+// -----------------------------
+
+.bk-header {
+    border-bottom: 1px solid @color-swatch1;
+    padding: 1em 3em;
+    background-color: fade(@color-swatch7, 90%); 
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    transition: background 0.2s;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:    0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow:    0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    @media @tablet {
+        display: inline-block;
+        padding: 3% 5%;
+    }
+    @media @mobile {
+        text-align: center;
+        float: left;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .widget.logo, .widget.companyname {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .widget.companyname {
+        @media @mobile {
+            display: block;
+        }
+        a {
+            font-size: bkscale(@font-swatch10-font-size,0.9);
+            line-height: bkscale(@font-swatch10-line-height,0.9);
+        }
+    }
+    .logo img {
+        padding-top: 7px;
+        margin-right: 5px;
+    }
+    @media @mobile {
+        display: table;
+        width: 90%;
+        text-align: center;
+        margin: 7% 5%;
+    }
+}
+
+// Flexbox solution for header on DESKTOP // 
+
+@media only screen and (min-width: 769px) {
+    .flex-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        }
+
+    .flex-item {
+        min-width: 50%;
+    }
+
+    .flex-item:nth-child(1) {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        }
+
+    .flex-item:nth-child(2) {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Navigation
+// -----------------------------
+
+.widget.extendednavigation {
+    .clearfix;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 769px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    ul li.folder:after {
+        border-top-color: @font-swatch6-color;
+    }
+    ul li.folder:hover:after {
+        border-top-color: @font-swatch6-color-hover;
+    }
+    ul li:hover ul {
+        background-color: @color-swatch1;
+        border: 1px solid darken(@color-swatch1,7%);
+    }
+    ul li ul li {
+        border-bottom: 1px solid darken(@color-swatch1,7%);
+        .text {
+            padding: 9px 0;
+        }
+        &:hover {
+            background-color: darken(@color-swatch1, 3%)
+        }
+    }
+}
+
+/* Selected state */
+
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
+}
+
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+// Styles for Tablet & Mobile // 
+
+@media @tablet {
+    .widget.extendednavigation {
+        ul {
+            li {
+                padding: 0;
+                a {
+                    padding: 9px 0;
+                }
+                &.folder .text {
+                    padding: 9px 20px 9px 0;
+                }
+            }
+            li.folder {
+                margin-right: 0;
+            }
+            li:hover ul {
+                margin: 0;
+                li .text {
+                    padding: 9px 0px;
+                }
+            }
+        }
+        a.pull {
+            &:after {
+                background: @color-swatch2;
+                box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+            }
+        }
+    }
+}
+
+// Styles for TABLET ONLY // 
+
+@media only screen and (max-width : 768px) and (min-width : 480px) {
+    .widget.extendednavigation {
+        ul li {
+            border-bottom: none;
+            border-top: 1px solid darken(@color-swatch1,7%);
+            ul li {
+                border-bottom: none;
+            }
+        }
+        ul {
+            margin-top: -1px;
+        }
+        ul li > .text {
+            padding: 0 40px 0 20px;
+        }
+        ul li.folder ul li .text {
+            padding: 0 20px;
+        }
+        a.pull {
+            top: -35px;
+        }
+    }
+}
+
+// Styles for MOBILE ONLY // 
+
+@media @mobile {
+    .widget.extendednavigation {
+        width: 100%;
+        float: left;
+        min-height: 45px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: @color-swatch1;
+        ul {
+            padding-top: 45px;
+        }
+        ul li:hover ul {
+            background-color: darken(@color-swatch1, 3%);
+            li:hover {
+                background-color: darken(@color-swatch1, 3%);
+            }
+            li:last-child {
+                border-bottom: none;
+            }
+        }
+        ul li {
+            border-bottom: none;
+            border-top: 1px solid darken(@color-swatch1,7%);
+            a {
+                padding: 9px 20px;
+            }
+            &.folder .text {
+                padding: 9px 35px 9px 20px;
+            }
+            ul li {
+                border-bottom: none;
+            }
+        }
+        ul li.folder ul li .text {
+            padding: 0;
+        }
+        ul li.folder:after {
+            right: 20px;
+        }
+        a.pull {
+            width: 100%;
+            top: 0;
+            height: 45px;
+            border-top: 1px solid darken(@color-swatch1,7%);
+            &:after {
+                left: 50%;
+                margin-left: -13px;
+                top: 15px;
+                background: @color-swatch2;
+                box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+            }
+        }
+    }
+    /* Selected state */
+    .extendednavigation ul li.folder.selected ul li .text {
+        color: darken(@color-swatch4, 10%);
+    }
+
+    .extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+        a, .text {
+            color: darken(@color-swatch4, 10%);
+        }
+    }
+}
+
+/* Left aligned nav */
+
+div.widget .extendednavigation ul.align-left, div.widget.extendednavigation ul.align-left {
+    @media only screen and (min-width: 769px) {
+        width: 100%;
+    }
+}
+
+/* Center aligned nav */
+
+@media @tablet {
+    div.widget .extendednavigation ul.align-center li.folder .text, div.widget.extendednavigation ul.align-center li.folder .text {
+        padding: 9px 35px;
+    }
+    div.widget .extendednavigation ul.align-center li.folder ul li .text, div.widget.extendednavigation ul.align-center li.folder ul li .text {
+        padding: 0;
+    }
+}
+
+/* Fixes for nav overlay on editor */
+
+
+.widget.extendednavigation .bk-overlay {
+    @media @tablet {
+        top: -40px !important;
+    }
+    @media @mobile {
+        top: 0 !important;
+        width: 100%;
+    }
+}
+
+
+/* =================================
+
+Header - PROFILE WIDGETS IN HOMEPAGE
+
+==================================== */
+
+.widget.profile .bk-profile-socialicons span a, .widget.socialicons span a {
+    .border-radius(50px);
+}
+
+.cd-header {
+    height: 100%;   
+    @media only screen and (max-width: 960px) {
+        height: auto;
+    } 
+}
+
+.cd-header .widget.socialicons {
+    margin: 0;
+    span a {
+        background-color: transparent;
+        &:hover {
+            background-color: darken(@color-swatch7,5%);
+            .transition( all, 0.5s, ease );
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        left: 5%;
+    }
+}
+
+.cd-header .widget.socialicons {
+    /* PNG ICONS */
+    span.bk-socialicons-twitter a {
+        background-image: image('/images/social/socialicons-twitter.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-linkedin a {
+        background-image: image('/images/social/socialicons-linkedin.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-facebook a {
+        background-image: image('/images/social/socialicons-facebook.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-rss a {
+        background-image: image('/images/social/socialicons-rss.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-googleplus a {
+        background-image: image('/images/social/socialicons-googleplus.png');
+        background-size: 30px;
+    }
+    span.bk-socialicons-youtube a {
+        background-image: image('/images/social/socialicons-youtube.png');
+        background-size: 30px;
+    }
+}
+
+.svg .cd-header .widget.socialicons {
+    /* SVG ICONS */
+    span.bk-socialicons-twitter a {
+        background-image: image('/images/social/socialicons-twitter.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-linkedin a {
+        background-image: image('/images/social/socialicons-linkedin.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-facebook a {
+        background-image: image('/images/social/socialicons-facebook.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-rss a {
+        background-image: image('/images/social/socialicons-rss.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-googleplus a {
+        background-image: image('/images/social/socialicons-googleplus.svg');
+        background-size: 25px;
+    }
+    span.bk-socialicons-youtube a {
+        background-image: image('/images/social/socialicons-youtube.svg');
+        background-size: 25px;
+    }
+}
+
+.header-content {
+    background-color: @color-swatch3;
+    width: 350px;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+    @media @mobile {
+        float: left;
+    }
+}
+
+.details-container {
+    padding: 3em; 
+    @media only screen and (max-width: 600px) {
+        padding: 8% 5%;
+    }
+    .widget.content .bk-content-text h2 {
+        font-family: @font-swatch8-font-family;
+        color: @font-swatch8-color;
+        font-size: @font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height: @font-swatch8-line-height;
+    }
+    .widget.content .bk-content-text p {
+        font-family: @font-swatch9-font-family;
+        color: @font-swatch9-color;
+        font-size: @font-swatch9-font-size;
+        font-weight: @font-swatch9-font-weight;
+        line-height: @font-swatch9-line-height;
+    }
+    .widget.button {
+        button.btn, button, .btn {
+            padding: 0;
+            margin: 2em 0 0;
+            font-weight: 700;
+            background-color: transparent;
+            -webkit-box-shadow: none; 
+            -moz-box-shadow: none; 
+            box-shadow: none; 
+            &:hover {
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            @media only screen and (max-width: 600px) {
+                padding: 0;
+            }
+            .btnText:after {
+                content: '\2192';
+                right: 0;
+                padding-left: 5px;
+                color: darken(@color-swatch4, 10%);
+            }
+        }
+    }
+}
+
+.profile-container {
+    margin-bottom: 2em;
+    background-color: @color-swatch2;
+    @media @mobile {
+        margin-bottom: 0;
+    }
+    .widget.profile {
+        padding: 3em;
+        @media only screen and (max-width: 600px) {
+            padding: 8% 5%;
+        }
+        .bk-profile-address p, p, span, a {
+            color: @color-swatch1;
+            font-weight: 700;
+        }
+    }
+    .twitter .twitter-content p a {
+        color: @color-swatch3;
+    }
+    .widget.profile form {
+        button.btn {
+            -webkit-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+            -moz-box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+            box-shadow: 0px 3px 0px 0px darken(@color-swatch2,8%);
+            &:hover {
+                background-color: lighten(@color-swatch3,5%);
+            }
+            @media @tablet {
+                left: 0;
+            }
+        }
+        fieldset input {
+            height: 42px;
+            @media @tablet {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.header-arrow-down a {
+    background-image: image('/images/header-arrow-down.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @media only screen and (max-width: 960px) {
+        display: none;
+    }
+}
+
+
+/* ===================
+
+    Default Page
+
+ ===================== */
+
+.bk-default {
+    background-color: @color-swatch1;
+    .cd-header {
+        min-height: 80px;
+        height: auto;
+    }
+    .canvas {
+        @media @mobile {
+            border-top: 1px solid darken(@color-swatch1,7%);
         }
     }
 }

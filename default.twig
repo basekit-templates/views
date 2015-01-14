@@ -4,19 +4,16 @@
 <div class="bk-default">
 
 <header class="cd-header">
-	<div class="nav-icon"><a class="cd-menu-trigger" href="#main-nav"><span></span></a></div>
-	<div class="brand">
-		<div class="visual-identity">
-			{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-			{{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
-		</div>
+	<div class="bk-header flex-container">
+			<div class="brand flex-item">
+		           {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	        </div>
+	        <div class="flex-item">
+		 		{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			 </div>
 	</div>
 </header>
-
-<nav id="main-nav">
-	{{widget('extendednavigation', 'header-navigation', {"align":"center"})|raw}}
-	<a href="#0" class="cd-close-menu"><span></span></a>
-</nav>
 
 <div class="canvas">
 	<div class="wrapper">
