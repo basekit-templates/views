@@ -52,21 +52,18 @@ html, body {
   height: 100%;
 }
 
-body {
+.cd-header {
     background-image: image('/images/feature-bg.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     margin: 0;
-    .bk-home {
-        height: 100%;
-    }
-    @media only screen and (max-width: 960px) {
-        background-size: auto;
-    }
+    padding-bottom: 20px;
 }
 
-
+.bk-home .cd-header {
+    height: 100%;
+}
 
 
 
@@ -648,19 +645,6 @@ PROFILE WIDGETS IN HOMEPAGE
                 width: 100%;
             }
         }
-    }
-}
-
-.header-arrow-down a {
-    background-image: image('/images/header-arrow-down.png');
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 60px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    @media only screen and (max-width: 960px) {
-        display: none;
     }
 }
 
