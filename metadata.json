@@ -61,9 +61,9 @@
        "title": "Karla",
         "font1": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "24px",
+            "font-size": "26px",
             "font-weight": "400",
-            "line-height": "36px",
+            "line-height": "38px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
