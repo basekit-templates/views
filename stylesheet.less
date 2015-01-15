@@ -52,18 +52,6 @@ html, body {
   height: 100%;
 }
 
-.cd-header {
-    background-image: image('/images/feature-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    margin: 0;
-    padding-bottom: 20px;
-}
-
-.bk-home .cd-header {
-    height: 100%;
-}
 
 
 
@@ -76,8 +64,9 @@ html, body {
 .bk-default {
     background-color: @color-swatch1;
     .cd-header {
-        min-height: 80px;
-        height: auto;
+        background-color: @color-swatch1;
+        background-image: none;
+        padding-bottom: 0;
     }
     .canvas {
         @media @mobile {
@@ -475,7 +464,31 @@ PROFILE WIDGETS IN HOMEPAGE
 }
 
 .cd-header {
+    background-image: image('/images/feature-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    margin: 0;
+    padding-bottom: 20px;
     height: auto;
+}
+
+.bk-home .cd-header {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.header-arrow-down a {
+    background-image: image('/images/header-arrow-down.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @media only screen and (max-width: 960px) {
+        display: none;
+    }
 }
 
 .cd-header .widget.socialicons {
