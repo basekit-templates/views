@@ -1,11 +1,11 @@
 /* ===================
-	Imports & Includes 
+	Imports & Includes
 	==================*/
 
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 /* =======
-	Mixins 
+	Mixins
 	====== */
 
 .border-radius (@radius: 5px) {
@@ -21,17 +21,17 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 	transition: 		@prop @time @ease;
 }
 
 
 
 
-/* =================== 
+/* ===================
 
 Primary style
 
@@ -45,7 +45,7 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-} 
+}
 
 html, body {
   /* important for the full-width image to work */
@@ -79,7 +79,7 @@ html, body {
 
 
 /* =====
-	Main 
+	Main
 	==== */
 
 .main {
@@ -124,7 +124,7 @@ html, body {
 .bk-header {
     border-bottom: 1px solid @color-swatch1;
     padding: 1em 3em;
-    background-color: fade(@color-swatch7, 90%); 
+    background-color: fade(@color-swatch7, 90%);
     -webkit-transition: background 0.2s;
     -moz-transition: background 0.2s;
     transition: background 0.2s;
@@ -173,7 +173,7 @@ html, body {
     }
 }
 
-// Flexbox solution for header on DESKTOP // 
+// Flexbox solution for header on DESKTOP //
 
 @media only screen and (min-width: 769px) {
     .flex-container {
@@ -294,7 +294,7 @@ html, body {
     }
 }
 
-// Styles for Tablet & Mobile // 
+// Styles for Tablet & Mobile //
 
 @media @tablet {
     .widget.extendednavigation {
@@ -327,7 +327,7 @@ html, body {
     }
 }
 
-// Styles for TABLET ONLY // 
+// Styles for TABLET ONLY //
 
 @media only screen and (max-width : 768px) and (min-width : 480px) {
     .widget.extendednavigation {
@@ -353,7 +353,7 @@ html, body {
     }
 }
 
-// Styles for MOBILE ONLY // 
+// Styles for MOBILE ONLY //
 
 @media @mobile {
     .widget.extendednavigation {
@@ -573,7 +573,7 @@ body {
 }
 
 .details-container {
-    padding: 3em; 
+    padding: 3em;
     @media only screen and (max-width: 600px) {
         padding: 8% 5%;
     }
@@ -597,9 +597,9 @@ body {
             margin: 2em 0 0;
             font-weight: 700;
             background-color: transparent;
-            -webkit-box-shadow: none; 
-            -moz-box-shadow: none; 
-            box-shadow: none; 
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
             &:hover {
                 background-color: transparent;
                 text-decoration: underline;
@@ -684,6 +684,10 @@ body {
     margin: 10px 0;
 }
 
+.fonectamap {
+    margin-bottom: 20px;
+}
+
 
 /* ========
     BUTTONS
@@ -691,13 +695,13 @@ body {
 
 .feature-btn button.btn,
 .widget.button button,
-button.btn, 
+button.btn,
 .btn,
-.widget.profile form button, 
-.signupform fieldset button, 
-.contactform button.btn, 
-.blogsearch form button, 
-.checkout-order-button, 
+.widget.profile form button,
+.signupform fieldset button,
+.contactform button.btn,
+.blogsearch form button,
+.checkout-order-button,
 .checkout-empty-link,
 .widget.tweet a,
 .widget.paypalbuynow .widget.button.paypal,
@@ -716,9 +720,9 @@ a.basket-summary-empty-cta.btn,
     line-height: @font-swatch7-line-height;
     background-color: @font-swatch7-background-color;
     .border-radius(5px);
-    -webkit-box-shadow: 0px 3px 0px 0px @color-swatch2; 
-    -moz-box-shadow:    0px 3px 0px 0px @color-swatch2; 
-    box-shadow:         0px 3px 0px 0px @color-swatch2; 
+    -webkit-box-shadow: 0px 3px 0px 0px @color-swatch2;
+    -moz-box-shadow:    0px 3px 0px 0px @color-swatch2;
+    box-shadow:         0px 3px 0px 0px @color-swatch2;
     border: none;
     margin: 5px 0;
     padding: 8px 14px;
@@ -730,7 +734,7 @@ a.basket-summary-empty-cta.btn,
         background-color: @font-swatch7-background-color-hover;
         .transition( all, 0.5s, ease );
     }
-} 
+}
 
 .widget.clicktocall {
     @media @mobile {
@@ -827,7 +831,7 @@ input, input[type='text'], input[type=email] {
 }
 
 input, input[type='text'], input[type=email], textarea, select, .signupform fieldset input, .blogsearch form input, .signupform fieldset input[type=email], .blogsearch form input[type='text'] {
-    background-color: darken(@color-swatch1,7%); 
+    background-color: darken(@color-swatch1,7%);
     border: 1px solid darken(@color-swatch1,7%);
     height: 45px;
     .border-radius(5px);
@@ -880,8 +884,8 @@ textarea {
     }
 }
 
-.signupform fieldset button, 
-.blogsearch form button.blog-search-submit-button, 
+.signupform fieldset button,
+.blogsearch form button.blog-search-submit-button,
 .form-group.productlist-search .btn,
 .widget.profile form button.btn {
     height: 42px;
@@ -890,13 +894,13 @@ textarea {
     font-size: 15px;
     border: none;
     .border-radius(5px);
-    -webkit-box-shadow: 0px 3px 0px 0px @color-swatch2; 
-    -moz-box-shadow:    0px 3px 0px 0px @color-swatch2; 
-    box-shadow:         0px 3px 0px 0px @color-swatch2; 
+    -webkit-box-shadow: 0px 3px 0px 0px @color-swatch2;
+    -moz-box-shadow:    0px 3px 0px 0px @color-swatch2;
+    box-shadow:         0px 3px 0px 0px @color-swatch2;
     padding: 8px 14px;
 }
 
-.signupform fieldset button, 
+.signupform fieldset button,
 .blogsearch form button.blog-search-submit-button {
     @media @tablet {
         width: 20%;
@@ -1013,8 +1017,8 @@ textarea {
     .message-box {
         background-color: #f9f2c7;
         -webkit-box-shadow: 0px 3px 0px darken(#f9f2c7,10%);
-        -moz-box-shadow:    0px 3px 0px darken(#f9f2c7,10%); 
-        box-shadow:         0px 3px 0px darken(#f9f2c7,10%); 
+        -moz-box-shadow:    0px 3px 0px darken(#f9f2c7,10%);
+        box-shadow:         0px 3px 0px darken(#f9f2c7,10%);
         text-align: center;
         padding: 10px 0;
         margin: 0 auto;
@@ -1034,15 +1038,15 @@ textarea {
             padding-right: 10px;
         }
     }
-}  
+}
 
 .widget.contactform .overlay.success {
     margin-bottom: 20px;
     .message-box {
         background-color: #156150;
         -webkit-box-shadow: 0px 3px 0px darken(#156150,20%);
-        -moz-box-shadow:    0px 3px 0px darken(#156150,20%); 
-        box-shadow:         0px 3px 0px darken(#156150,20%); 
+        -moz-box-shadow:    0px 3px 0px darken(#156150,20%);
+        box-shadow:         0px 3px 0px darken(#156150,20%);
         text-align: center;
         padding: 10px 0;
         margin: 0 auto;
@@ -1062,7 +1066,31 @@ textarea {
             padding-right: 10px;
         }
     }
-}  
+}
+
+
+/* FONECTA FORM */
+
+.fonectacontactform {
+    label {
+        color: @color-swatch3;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+
+    input[type="checkbox"] {
+        height: auto;
+        width: auto;
+        display: inline;
+        -webkit-appearance: checkbox;
+        -moz-appearance:    checkbox;
+        appearance:         checkbox;
+    }
+
+    input[type="checkbox"] + label {
+        display: inline;
+    }
+}
 
 /* ===============================
    TWITTER
@@ -1332,7 +1360,7 @@ hr {
         text-align: center;
         max-height: 250px;
         max-width: 250px;
-        float: left; 
+        float: left;
         margin-top: 3px;
         background: none !important;
         background-image: none !important;
@@ -1373,10 +1401,10 @@ hr {
         background-color: transparent;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
-        box-shadow: none;    
+        box-shadow: none;
         &:hover {
             text-decoration: underline;
-        }   
+        }
     }
  }
 
@@ -1391,7 +1419,7 @@ hr {
  }
 
  /* ===============================
-   BLOG POST 
+   BLOG POST
    =============================== */
 
 .widget.blogpost .blog-post-item .blog-post-feature-image-wrap img {
@@ -1412,7 +1440,7 @@ hr {
         }
         img {
             display: block;
-            max-width: 100%;   
+            max-width: 100%;
             margin: 0 auto;
         }
     }/* end blog-post-feature-image-wrap */
@@ -1546,7 +1574,7 @@ footer.blog-post-metadata time {
                         display: inline-block;
                         text-align: center;
                         .inner-item {
-                            .menu-item-price:before { 
+                            .menu-item-price:before {
                                 content: "";
                                 background-image: image('/images/five-stars.png');
                                 background-repeat: no-repeat;
@@ -1562,12 +1590,12 @@ footer.blog-post-metadata time {
                             }
                             .menu-item-nutritional-title, .menu-item-nutritional-prop, .menu-section-item-dietary-props {
                                 .dietary-icon {
-                                    &:before { 
+                                    &:before {
                                         color: darken(@color-swatch5,35%);
                                     }
                                 }
                             }
-                        }  
+                        }
                     }/* end menu-item-promoted */
                     .inner-item {
                         text-align: center;
@@ -1622,7 +1650,7 @@ footer.blog-post-metadata time {
                                 margin-bottom: 5px;
                                 margin-top: 0;
                                 padding: 0 3px;
-                                &:before { 
+                                &:before {
                                     content: "\2217";
                                     font-size: 21px;
                                     z-index: 0;
@@ -1639,7 +1667,7 @@ footer.blog-post-metadata time {
             .menu-subsection {
                 padding: 0;
                 margin: 0;
-                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
+                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */
                     padding: 0 3em 2em;
                     margin: 2em 0 1em;
                     position: relative;
@@ -1654,7 +1682,7 @@ footer.blog-post-metadata time {
                         @media @mobile {
                             padding: 0;
                         }
-                        h2:after { 
+                        h2:after {
                             content: "";
                             background-image: image('/images/five-stars.png');
                             background-repeat: no-repeat;
@@ -1799,7 +1827,7 @@ footer.blog-post-metadata time {
             display: inline-block;
             padding: 3px 15px;
             margin: 5px 0;
-        } 
+        }
     }
     a:hover {
         text-decoration: none;
@@ -1899,7 +1927,7 @@ footer.blog-post-metadata time {
                 outline: none;
                 box-shadow: 0 0 6px #81bde7;
                 border: 1px solid darken(@color-swatch1,7%);
-            } 
+            }
         }
     }
     .ecom-product-cattag {
@@ -2085,14 +2113,14 @@ span.ecom-product-category {
                             border: 1px solid darken(@color-swatch1,7%);
                             .border-radius(3px);
                             -webkit-box-shadow: 0px 2px 0px darken(@color-swatch1,10%);
-                            -moz-box-shadow:    0px 2px 0px darken(@color-swatch1,10%); 
-                            box-shadow:         0px 2px 0px darken(@color-swatch1,10%); 
+                            -moz-box-shadow:    0px 2px 0px darken(@color-swatch1,10%);
+                            box-shadow:         0px 2px 0px darken(@color-swatch1,10%);
                             &:hover {
                                 background-color: darken(@color-swatch1,10%);
                                 border: 1px solid darken(@color-swatch1,12%);
                                 -webkit-box-shadow: 0px 2px 0px darken(@color-swatch1,20%);
-                                -moz-box-shadow:    0px 2px 0px darken(@color-swatch1,20%); 
-                                box-shadow:         0px 2px 0px darken(@color-swatch1,20%); 
+                                -moz-box-shadow:    0px 2px 0px darken(@color-swatch1,20%);
+                                box-shadow:         0px 2px 0px darken(@color-swatch1,20%);
                             }
                             display: inline-block;
                             @media @tablet {
