@@ -712,7 +712,8 @@ button.btn,
 .widget.ecombasket .ecombasket-pull,
 a.btn.ecombasket-summary-link,
 a.basket-summary-empty-cta.btn,
-.btn.basket-summary-submit {
+.btn.basket-summary-submit,
+.advancedcontactform button {
     font-family: @font-swatch7-font-family;
     color: @font-swatch7-color;
     font-size: @font-swatch7-font-size;
@@ -976,7 +977,8 @@ textarea {
 
 /* CONTACT FORM */
 
-.widget.contactform {
+.widget.contactform,
+.advancedcontactform {
     label[for=contactform-email] {
         color: @color-swatch3;
         font-weight: 700;
@@ -1091,6 +1093,23 @@ textarea {
         display: inline;
     }
 }
+
+
+// Advanced Contact Form
+.select-wrap {
+    margin: 10px 0 20px;
+    display: inline-block;
+}
+
+.advancedcontactform__option-list {
+    margin: 0px 0 10px;
+}
+
+.advancedcontactform__label {
+    width: 100%;
+    display: block;
+}
+
 
 /* ===============================
    TWITTER
@@ -2177,9 +2196,6 @@ span.ecom-product-category {
     .bk-profile-address p {
         display: inline-block;
         padding-bottom: 0;
-        &:after {
-            content: "\002C";
-        }
         &:last-child:after {
             content: '';
         }
