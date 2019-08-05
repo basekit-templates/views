@@ -1,5 +1,6 @@
 {
     "name":"Views",
+    "versionTenCompatible": 1,
     "thumbnail":"views.png",
     "screenshot":"views-screenshot.jpg",
     "templateType":"standard",
